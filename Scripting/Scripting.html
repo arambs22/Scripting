@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <br>
+    <meta charset="UTF-8">
+    <h1>JavaScript</h1>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="listas">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#intro-javascript"> 1: JavaScript </a></li>
+            <li><a href="#variables"> 1.1: Types of Variables in Javascript </a></li>
+            <li><a href="#loops"> 1.2: Loops in Javascript </a></li>
+        </ul>
+    </div>
+
+    <div id="intro-javascript">
+        <h1>1: Javascript</h1>
+    </div>
+
+    </div>
+
+    <div id="variables">
+        <h2>1.1: Types of Variables in Javascript</h1>
+        <br>
+        <p><strong>Values</strong></p>
+        <p>Numbers Values of the number type are 13</p>
+        <br>
+        <p><strong>Arithmetic</strong></p>
+        <p>100 + 4 * 11 = 144   The + and * symbols are called operators</p>
+        <p>The / operator has the same precedence as *. Likewise, + and - have the same precedence.</p>
+        <p>When multiple operators with the same precedence appear next to each other, as in 1 - 2 + 1, they are applied left to right: (1 - 2) + 1.</p>
+        <br>
+        <p><strong>Strings</strong></p>
+        <p>The next basic data type is the string. Strings are used to represent text. They are written by enclosing their content in quotes.</p>
+        <p>`Down on the sea`, "Lie on the ocean", 'Float on the ocean'</p>
+        <p>You can use single quotes, double quotes, or backticks to mark strings, as long as the quotes at the start and the end of the string match.</p>
+        <p>Strings cannot be divided, multiplied, or subtracted. The + operator can be used on them, not to add, but to concatenate—to glue two strings together. The following line will produce the string "concatenate":</p>
+        <p>"con" + "cat" + "e" + "nate"</p>
+        <p>Backtick-quoted strings, usually called template literals, can do a few more tricks. Apart from being able to span lines, they can also embed other values.</p>
+        <p>`half of 100 is ${100 / 2}`</p>
+        <br>
+        <p><strong>Unary operators</strong></p>
+        <p>One example is the typeof operator, which produces a string value naming the type of the value you give it</p>
+        <p>console.log(typeof 4.5)</p>
+        <p>// → number</p>
+        <p>console.log(typeof "x")</p>
+        <p>// → string</p>
+        <br>
+        <p><strong>Boolean Values</strong></p>
+        <p>It is often useful to have a value that distinguishes between only two possibilities, like “yes” and “no” or “on” and “off”. For this purpose, JavaScript has a Boolean type, which has just two values, true and false, written as those words.</p>
+        <p>Comparison</p>
+        <p>console.log(3 > 2)<br>
+        // → true<br>
+        console.log(3 < 2)<br>
+        // → false</p>
+        <p>console.log("Garnet" != "Ruby")<br>
+        // → true<br>
+        console.log("Pearl" == "Amethyst")<br>
+        // → false</p>
+        <br>
+        <p><strong>Logical Operators</strong></p>
+        <p>JavaScript supports three logical operators: and, or, and not. These can be used to “reason” about Booleans.</p>
+        <p>The && operator represents logical and. It is a binary operator, and its result is true only if both the values given to it are true.</p>
+        <p>console.log(true && false)<br>
+        // → false<br>
+        console.log(true && true)<br>
+        // → true</p>
+        <p>The || operator denotes logical or. It produces true if either of the values given to it is true.</p>
+        <p>console.log(false || true)<br>
+        // → true<br>
+        console.log(false || false)<br>
+        // → false</p>
+        <p>Not is written as an exclamation mark (!). It is a unary operator that flips the value given to it—!true produces false and !false gives true.</p>
+        <p>The last logical operator we will look at is not unary, not binary, but ternary, operating on three values. It is written with a question mark and a colon, like this:</p>
+        <p>console.log(true ? 1 : 2);<br>
+        // → 1<br>
+        console.log(false ? 1 : 2);<br>
+        // → 2</p>
+        <br>
+        <p><strong>Short-circuiting of Logical Operators</strong></p>
+        <p>The logical operators && and || handle values of different types in a peculiar way. They will convert the value on their left side to Boolean type in order to decide what to do, but depending on the operator and the result of that conversion, they will return either the original left-hand value or the right-hand value.</p>
+        <p>console.log(null || "user")<br>
+        // → user<br>
+        console.log("Agnes" || "user")<br>
+        // → Agnes</p>
+        <p>The rules for converting strings and numbers to Boolean values state that 0, NaN, and the empty string ("") count as false, while all the other values count as true.</p>
+        <p>The ?? operator resembles ||, but returns the value on the right only if the one on the left is null or undefined, not if it is some other value that can be converted to false. Often, this is preferable to the behavior of ||.</p>
+        <p>console.log(0 || 100);<br>
+        // → 100<br>
+        console.log(0 ?? 100);<br>
+        // → 0<br>
+        console.log(null ?? 100);<br>
+        // → 100</p>
+        <br>
+        <p><strong>Intro to Functions</strong></p>
+        <p>Functions are one of the most central tools in JavaScript programming. The concept of wrapping a piece of program in a value has many uses. It gives us a way to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other.</p>
+        <p>const square = function(x) {<br>
+        &nbsp;&nbsp;return x * x;<br>
+        };</p>
+        <p>console.log(square(12));<br>
+        // → 144</p>
+        <br>
+        <p><strong>Summary</strong></p>
+        <p>We looked at four types of JavaScript values: numbers, strings, Booleans, and undefined values.</p>
+        <p>You can combine and transform values with operators. We saw binary operators for arithmetic (+, -, *, /, and %), string concatenation (+), comparison (==, !=, ===, !==, <, >, <=, >=), and logic (&&, ||, ??), as well as several unary operators (- to negate a number, ! to negate logically, and typeof to find a value’s type) and a ternary operator (?:) to pick one of two values based on a third value.</p>
+        <br>
+        <p><strong>Intro to REGEX</strong></p>
+        <p>Este regex, /(\+|-\x||\/)/, es una expresión regular que coincide con uno de los siguientes caracteres: +, -, x, o /. Permíteme explicar cada parte de la expresión regular:</p>
+        <ul>
+            <li><strong>/:</strong> Esto indica el inicio de la expresión regular.</li>
+            <li><strong>(  ):</strong> Estos paréntesis son usados para agrupar múltiples opciones dentro de la expresión regular. En este caso, agrupan los cuatro operadores (+, -, x, /) juntos.</li>
+            <li><strong>\+, \-, \x, \/:</strong> Estos son los caracteres de los operadores (+, -, x, /). Los operadores + y / son escapados con una barra invertida \ porque de lo contrario tendrían un significado especial en una expresión regular.</li>
+            <li><strong>|:</strong> El tubo | es un operador que significa "o", lo que indica que cualquiera de las opciones puede ser coincidente.</li>
+            <li><strong>/:</strong> Esto indica el final de la expresión regular.</li>
+        </ul>
+        <br>
+        <p><strong>Switch</strong></p>
+        <p>The switch statement evaluates an expression, matching the expression's value against a series of case clauses, and executes statements after the first case clause with a matching value, until a break statement is encountered. The default clause of a switch statement will be jumped to if no case matches the expression's value.</p>
+
+    </div>
+
+    <div id="loops">
+        <h2>1.2: Loops in Javascript</h1>
+        <br>
+        <p><strong>Bindings</strong></p>
+        <p>How does a program keep an internal state? How does it remember things? We have seen how to produce new values from old values, but this does not change the old values, and the new value must be used immediately or it will dissipate again. To catch and hold values, JavaScript provides a thing called a binding, or variable:</p>
+        <pre><code>let op = 5 * 5;</code></pre>
+        <p>The special word (keyword) <code>let</code> indicates that this sentence is going to define a binding. It is followed by the name of the binding and, if we want to immediately give it a value, by an <code>=</code> operator and an expression.</p>
+        <p>After a binding has been defined, its name can be used as an expression. The value of such an expression is the value the binding currently holds. Here’s an example:</p>
+        <pre><code>let ten = 10;
+    console.log(ten * ten);</code></pre>
+        <p>When a binding points at a value, that does not mean it is tied to that value forever. The <code>=</code> operator can be used at any time on existing bindings to disconnect them from their current value and have them point to a new one:</p>
+        <pre><code>let mood = "light";
+    console.log(mood);
+    
+    mood = "dark";
+    console.log(mood);
+    
+    let luigisDebt = 140;
+    
+    luigisDebt = luigisDebt - 35;
+    console.log(luigisDebt);</code></pre>
+    
+        <p><strong>Control Flow</strong></p>
+        <p>When your program contains more than one statement, the statements are executed as though they were a story, from top to bottom. For example, the following program has two statements. 
+    The first asks the user for a number, and the second, which is executed after the first, shows the square of that number:</p>
+        <img src="neurons.jpg" id="neuronas">
+        <p>Not all programs are straight roads. We may, for example, want to create a branching road where the program takes the proper branch based on the situation at hand. This is called conditional execution.</p>
+        <img src="neurons.jpg" id="neuronas">
+        <p>Conditional execution is created with the <code>if</code> keyword in JavaScript. In the simple case, we want some code to be executed if, and only if, a certain condition holds.</p>
+        <img src="neurons.jpg" id="neuronas">
+        <img src="neurons.jpg" id="neuronas">
+        <img src="neurons.jpg" id="neuronas">
+    
+        <p><strong>While Loops</strong></p>
+        <p>Consider a program that outputs all even numbers from 0 to 12. One way to write this is as follows:</p>
+        <img src="neurons.jpg" id="neuronas">
+        <p>That works, but the idea of writing a program is to make something less work, not more. If we needed all even numbers less than 1,000, this approach would be unworkable.</p>
+        <img src="neurons.jpg" id="neuronas">
+        <img src="neurons.jpg" id="neuronas">
+    
+        <p><strong>For Loops</strong></p>
+        <img src="neurons.jpg" id="neuronas">
+        <img src="neurons.jpg" id="neuronas">
+    
+        <p><strong>Switch</strong></p>
+        <img src="neurons.jpg" id="neuronas">
+    </div>
+
+
+</body>
+</html>

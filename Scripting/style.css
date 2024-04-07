@@ -1,0 +1,46 @@
+
+body {
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
+#intro-javascript, #variables, #loops, #listas{
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f97f;
+    border-radius: 20px;
+    color:#000000
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
