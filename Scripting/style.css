@@ -23,6 +23,11 @@ h2 {
     color:#000000
 }
 
+#uno, #dos, #tres, #cuatro, #cinco, #seis, #siete, #ocho, #nueve, #diez, #once, #doce {
+    max-width: 35%;
+    border-radius: 10px;
+}
+
 p {
     text-align: justify;
 }
